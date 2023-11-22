@@ -18,12 +18,14 @@ const usersState = {
   },
 }
 
+const localhostURLs = ['http://localhost:5500', '127.0.0.1:5500']
+
 const io = new Server(expressServer, {
   cors: {
     origin:
       process.env.NODE_ENV === 'production'
-        ? false
-        : ['http://localhost:5500', '127.0.0.1:5500'],
+        ? [...localhostURLs, 'https://chat-app-will-lucena.vercel.app']
+        : [...localhostURLs],
   },
 })
 
