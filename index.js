@@ -32,7 +32,7 @@ const io = new Server(expressServer, {
         ? [
             ...localhostURLs,
             'https://chat-app-will-lucena.vercel.app',
-            'https://vue-socket-game.vercel.app/',
+            'https://vue-socket-game.vercel.app',
           ]
         : [...localhostURLs],
   },
